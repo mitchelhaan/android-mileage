@@ -1,0 +1,27 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion "28.0.3"
+
+    defaultConfig {
+        applicationId "com.evancharlton.mileage"
+        minSdkVersion 4
+        targetSdkVersion 10
+
+        testApplicationId "com.evancharlton.mileage.tests"
+        testInstrumentationRunner "android.test.InstrumentationTestRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+    compile files('libs/aiCharts.2.0.0.182.84147.jar')
+    compile files('libs/opencsv-1.8.jar')
+}

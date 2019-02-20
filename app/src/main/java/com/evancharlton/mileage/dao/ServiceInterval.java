@@ -160,7 +160,7 @@ public class ServiceInterval extends Dao {
             }
 
             notification.defaults = Notification.DEFAULT_ALL;
-            notification.setLatestEventInfo(context, getDescription(), description, contentIntent);
+//            notification.setLatestEventInfo(context, getDescription(), description, contentIntent);
             NotificationManager notificationMgr = (NotificationManager) context
                     .getSystemService(Activity.NOTIFICATION_SERVICE);
             if (notificationMgr != null) {
