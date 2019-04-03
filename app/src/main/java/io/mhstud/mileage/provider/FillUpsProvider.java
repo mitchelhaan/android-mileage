@@ -6,8 +6,6 @@ import io.mhstud.mileage.provider.tables.ContentTable;
 import io.mhstud.mileage.provider.tables.FieldsTable;
 import io.mhstud.mileage.provider.tables.FillupsFieldsTable;
 import io.mhstud.mileage.provider.tables.FillupsTable;
-import io.mhstud.mileage.provider.tables.ServiceIntervalTemplatesTable;
-import io.mhstud.mileage.provider.tables.ServiceIntervalsTable;
 import io.mhstud.mileage.provider.tables.VehicleTypesTable;
 import io.mhstud.mileage.provider.tables.VehiclesTable;
 import io.mhstud.mileage.services.AutomaticBackupService;
@@ -44,10 +42,6 @@ import java.util.ArrayList;
  * <li>vehicles/#</li>
  * <li>vehicles/types/</li>
  * <li>vehicles/types/#</li>
- * <li>intervals/</li>
- * <li>intervals/#</li>
- * <li>intervals/templates</li>
- * <li>intervals/templates/#</li>
  * <li>cache</li>
  * <li>cache/*</li>
  * </ul>
@@ -78,8 +72,6 @@ public class FillUpsProvider extends ContentProvider {
         TABLES.add(new FieldsTable());
         TABLES.add(new VehiclesTable());
         TABLES.add(new VehicleTypesTable());
-        TABLES.add(new ServiceIntervalsTable());
-        TABLES.add(new ServiceIntervalTemplatesTable());
         TABLES.add(new CacheTable());
 
         for (ContentTable table : TABLES) {

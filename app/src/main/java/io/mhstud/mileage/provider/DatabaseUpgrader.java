@@ -9,8 +9,6 @@ import io.mhstud.mileage.provider.tables.ContentTable;
 import io.mhstud.mileage.provider.tables.FieldsTable;
 import io.mhstud.mileage.provider.tables.FillupsFieldsTable;
 import io.mhstud.mileage.provider.tables.FillupsTable;
-import io.mhstud.mileage.provider.tables.ServiceIntervalTemplatesTable;
-import io.mhstud.mileage.provider.tables.ServiceIntervalsTable;
 import io.mhstud.mileage.provider.tables.VehicleTypesTable;
 import io.mhstud.mileage.provider.tables.VehiclesTable;
 import io.mhstud.mileage.util.Debugger;
@@ -51,19 +49,6 @@ public class DatabaseUpgrader {
 
                     // add the volume units
                     exec("ALTER TABLE vehicles ADD COLUMN volume INTEGER DEFAULT -1;");
-
-                    // create the service interval table
-                    BUILDER.append("CREATE TABLE maintenance_intervals (");
-                    BUILDER.append(BaseColumns._ID).append(" INTEGER PRIMARY KEY AUTOINCREMENT,");
-                    BUILDER.append("creation_date INTEGER,");
-                    BUILDER.append("creation_odometer DOUBLE,");
-                    BUILDER.append("description TEXT,");
-                    BUILDER.append("interval_distance DOUBLE,");
-                    BUILDER.append("interval_duration INTEGER,");
-                    BUILDER.append("vehicle_id INTEGER,");
-                    BUILDER.append("is_repeating INTEGER");
-                    BUILDER.append(");");
-                    flush();
 
                     // create the version table
                     BUILDER.append("CREATE TABLE version (");
@@ -111,7 +96,7 @@ public class DatabaseUpgrader {
 
     private static boolean backupExistingTables() {
         String[] tables = new String[] {
-                "fillups", "vehicles", "maintenance_intervals"
+                "fillups", "vehicles"
         };
 
         try {
@@ -131,8 +116,7 @@ public class DatabaseUpgrader {
         ContentTable[] tables =
                 new ContentTable[] {
                         new FillupsTable(), new FillupsFieldsTable(), new FieldsTable(),
-                        new VehiclesTable(), new VehicleTypesTable(), new ServiceIntervalsTable(),
-                        new ServiceIntervalTemplatesTable(), new CacheTable()
+                        new VehiclesTable(), new VehicleTypesTable(), new CacheTable()
                 };
 
         try {
@@ -168,8 +152,6 @@ public class DatabaseUpgrader {
             BUILDER.append("CASE WHEN title IS NULL OR title=\"\" THEN (year||\" \"||make||\" \"||model) ELSE title END AS d_title, ");
             BUILDER.append("year, def, '1' FROM OLD_vehicles;");
             flush();
-
-            // TODO(3.1) - migrate service intervals.
 
             // migrate fillup data
             BUILDER.append("INSERT INTO ").append(FillupsTable.TABLE_NAME).append(" (");
@@ -211,7 +193,6 @@ public class DatabaseUpgrader {
         try {
             // exec("DROP TABLE OLD_vehicles");
             // exec("DROP TABLE OLD_fillups");
-            // exec("DROP TABLE OLD_maintenance_intervals");
             return true;
         } catch (SQLiteException e) {
             Log.e(TAG, "Unable to clean up old tables!", e);

@@ -165,19 +165,6 @@ public class DatabaseUpgraderTest extends TestCase {
 			db.execSQL(sql.toString());
 
 			sql.setLength(0);
-			sql.append("CREATE TABLE maintenance_intervals (");
-			sql.append("_id INTEGER PRIMARY KEY AUTOINCREMENT,");
-			sql.append("creation_date INTEGER,");
-			sql.append("creation_odometer DOUBLE,");
-			sql.append("description TEXT,");
-			sql.append("interval_distance DOUBLE,");
-			sql.append("interval_duration INTEGER,");
-			sql.append("vehicle_id INTEGER,");
-			sql.append("is_repeating INTEGER");
-			sql.append(");");
-			db.execSQL(sql.toString());
-
-			sql.setLength(0);
 			sql.append("CREATE TABLE version (");
 			sql.append("version INTEGER");
 			sql.append(");");

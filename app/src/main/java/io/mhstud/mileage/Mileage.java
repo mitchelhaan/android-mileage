@@ -69,8 +69,6 @@ public class Mileage extends TabActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        add(menu, R.string.service_intervals, ServiceIntervalsListActivity.class).setIcon(
-                R.drawable.ic_menu_intervals);
         add(menu, R.string.import_export, ImportExportActivity.class)
                 .setIcon(R.drawable.ic_menu_ie);
         add(menu, R.string.settings, SettingsActivity.class)

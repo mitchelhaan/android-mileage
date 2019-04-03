@@ -8,7 +8,6 @@
 
 	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-	<uses-permission android:name="android.permission.VIBRATE"/>
 	<supports-screens
 		android:largeScreens="true"
 		android:normalScreens="true"
@@ -34,10 +33,6 @@
 		<activity android:name=".VehicleListActivity" android:label="@string/title_vehicle_list" />
 		<activity android:name=".VehicleTypeActivity" android:label="@string/title_vehicle_type" />
 		<activity android:name=".VehicleTypeListActivity" android:label="@string/title_vehicle_type_list" />
-		<activity android:name=".ServiceIntervalActivity" android:label="@string/title_service_interval" />
-		<activity android:name=".ServiceIntervalsListActivity" android:label="@string/title_service_interval_list" />
-		<activity android:name=".ServiceIntervalTemplateActivity" android:label="@string/title_service_interval_template" />
-		<activity android:name=".ServiceIntervalTemplateListActivity" android:label="@string/title_service_interval_template_list" />
 		<activity android:name=".SettingsActivity" android:label="@string/title_settings" />
 		<activity android:name=".VehicleStatisticsActivity" android:label="@string/title_statistics" />
 		<activity android:name=".ImportExportActivity" android:label="@string/title_importexport" />
@@ -85,6 +80,5 @@
 		    </intent-filter>
 		</receiver>
 
-		<receiver android:name=".alarms.IntervalReceiver" />
 	</application>
 </manifest> 
