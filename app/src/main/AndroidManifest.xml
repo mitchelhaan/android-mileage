@@ -64,10 +64,6 @@
 		<activity android:name=".charts.MinimumVolumeChart" android:label="@string/title_chart_min_fuel" />
 		<activity android:name=".charts.MaximumVolumeChart" android:label="@string/title_chart_max_fuel" />
 		<activity android:name=".charts.TotalVolumeChart" android:label="@string/title_chart_total_fuel" />
-		<activity android:name=".charts.NorthChart" android:label="@string/title_chart_north" />
-		<activity android:name=".charts.SouthChart" android:label="@string/title_chart_south" />
-		<activity android:name=".charts.EastChart" android:label="@string/title_chart_east" />
-		<activity android:name=".charts.WestChart" android:label="@string/title_chart_west" />
 
 		<service android:name=".services.RecalculateEconomyService" />
 

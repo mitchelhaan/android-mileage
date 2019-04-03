@@ -62,18 +62,13 @@ public class VehicleStatisticsActivity extends Activity {
             Statistics.FUEL_PER_YEAR
     };
 
-    private static final Statistic[] LOCATIONS = {
-            Statistics.NORTH, Statistics.SOUTH, Statistics.EAST, Statistics.WEST
-    };
-
     private static final StatisticsGroup[] GROUPS = {
             new StatisticsGroup(R.string.stat_fuel_economy, ECONOMIES),
             new StatisticsGroup(R.string.stat_distance_between_fillups, DISTANCES),
             new StatisticsGroup(R.string.stat_fillup_cost, COSTS),
             new StatisticsGroup(R.string.stat_cost_per_distance, COSTS_PER_DISTANCE),
             new StatisticsGroup(R.string.stat_price, PRICES),
-            new StatisticsGroup(R.string.stat_fuel, CONSUMPTIONS),
-            new StatisticsGroup(R.string.stat_location, LOCATIONS)
+            new StatisticsGroup(R.string.stat_fuel, CONSUMPTIONS)
     };
 
     private final Vehicle mVehicle = new Vehicle(new ContentValues());

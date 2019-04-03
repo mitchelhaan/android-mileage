@@ -9,7 +9,6 @@ import io.mhstud.mileage.charts.AverageFuelEconomyChart;
 import io.mhstud.mileage.charts.AveragePriceChart;
 import io.mhstud.mileage.charts.AverageVolumeChart;
 import io.mhstud.mileage.charts.BestFuelEconomyChart;
-import io.mhstud.mileage.charts.EastChart;
 import io.mhstud.mileage.charts.LastMonthCostChart;
 import io.mhstud.mileage.charts.LastYearCostChart;
 import io.mhstud.mileage.charts.MaximumCostChart;
@@ -20,11 +19,8 @@ import io.mhstud.mileage.charts.MinimumCostChart;
 import io.mhstud.mileage.charts.MinimumDistanceChart;
 import io.mhstud.mileage.charts.MinimumPriceChart;
 import io.mhstud.mileage.charts.MinimumVolumeChart;
-import io.mhstud.mileage.charts.NorthChart;
-import io.mhstud.mileage.charts.SouthChart;
 import io.mhstud.mileage.charts.TotalCostChart;
 import io.mhstud.mileage.charts.TotalVolumeChart;
-import io.mhstud.mileage.charts.WestChart;
 import io.mhstud.mileage.charts.WorstFuelEconomyChart;
 import io.mhstud.mileage.dao.Vehicle;
 import io.mhstud.mileage.math.Calculator;
@@ -231,26 +227,4 @@ public final class Statistics {
         }
     };
 
-    public static class LocationStatistic extends Statistic {
-        private LocationStatistic(String value, Class<? extends ChartActivity> chartClass, int label) {
-            super(value, chartClass, label);
-        }
-
-        @Override
-        public String format(Context context, Vehicle vehicle, double value) {
-            return mFormatter.format(value);
-        }
-    }
-
-    public static final Statistic NORTH = new LocationStatistic("north", NorthChart.class,
-            R.string.stat_north);
-
-    public static final Statistic SOUTH = new LocationStatistic("south", SouthChart.class,
-            R.string.stat_south);
-
-    public static final Statistic EAST = new LocationStatistic("east", EastChart.class,
-            R.string.stat_east);
-
-    public static final Statistic WEST = new LocationStatistic("west", WestChart.class,
-            R.string.stat_west);
 }
