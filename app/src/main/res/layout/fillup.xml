@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <merge
 	xmlns:android="http://schemas.android.com/apk/res/android"
-	xmlns:mileage="http://schemas.android.com/apk/res/com.evancharlton.mileage"
+	xmlns:mileage="http://schemas.android.com/apk/res-auto"
 >
-	<com.evancharlton.mileage.views.CursorSpinner
+	<io.mhstud.mileage.views.CursorSpinner
 		android:id="@+id/vehicle"
 		android:layout_width="fill_parent"
 		android:layout_height="wrap_content"
 		mileage:uri="vehicles"
 		mileage:display_field="title"
 	/>
-	<com.evancharlton.mileage.views.DividerView
+	<io.mhstud.mileage.views.DividerView
 		android:layout_width="fill_parent"
 		android:layout_height="wrap_content"
 		android:text="@string/divider_fillup_info"
@@ -45,7 +45,7 @@
 				android:inputType="number"
 				android:digits="+0123456789."
 			/>
-			<com.evancharlton.mileage.views.DateButton
+			<io.mhstud.mileage.views.DateButton
 				android:id="@+id/date"
 				android:layout_width="0dip"
 		   		android:layout_weight="1"

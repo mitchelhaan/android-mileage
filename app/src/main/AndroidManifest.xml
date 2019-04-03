@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-	package="com.evancharlton.mileage"
+	package="io.mhstud.mileage"
 	android:versionName="3.1.1"
 	android:versionCode="3110"
 	android:installLocation="auto"
@@ -16,7 +16,7 @@
 		android:anyDensity="true"
 	/>
 	<application android:label="@string/app_name" android:icon="@drawable/icon">
-		<provider android:name=".provider.FillUpsProvider" android:authorities="com.evancharlton.mileage" />
+		<provider android:name=".provider.FillUpsProvider" android:authorities="io.mhstud.mileage" />
 
 		<activity android:name=".Mileage" android:theme="@android:style/Theme.NoTitleBar">
 			<intent-filter>

@@ -12,7 +12,7 @@
 			android:paddingRight="5dip"
 			android:orientation="vertical"
 		>
-			<com.evancharlton.mileage.views.DividerView
+			<io.mhstud.mileage.views.DividerView
 				android:layout_width="fill_parent"
 				android:layout_height="wrap_content"
 				android:text="@string/divider_about_app"
@@ -39,7 +39,7 @@
 				android:autoLink="all"
 				android:text="@string/about_website"
 			/>
-			<com.evancharlton.mileage.views.DividerView
+			<io.mhstud.mileage.views.DividerView
 				android:layout_width="fill_parent"
 				android:layout_height="wrap_content"
 				android:text="@string/divider_about_graphics"
@@ -62,7 +62,7 @@
 				android:autoLink="all"
 				android:text="@string/about_clutchpad_website"
 			/>
-			<com.evancharlton.mileage.views.DividerView
+			<io.mhstud.mileage.views.DividerView
 				android:layout_width="fill_parent"
 				android:layout_height="wrap_content"
 				android:text="@string/divider_about_charts"
@@ -85,7 +85,7 @@
 				android:autoLink="all"
 				android:text="@string/about_charts_website"
 			/>
-			<com.evancharlton.mileage.views.DividerView
+			<io.mhstud.mileage.views.DividerView
 				android:layout_width="fill_parent"
 				android:layout_height="wrap_content"
 				android:text="@string/divider_about_translators"

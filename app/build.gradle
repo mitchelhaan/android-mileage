@@ -1,15 +1,15 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 27
+    compileSdkVersion 28
     buildToolsVersion "28.0.3"
 
     defaultConfig {
-        applicationId "com.evancharlton.mileage"
-        minSdkVersion 4
-        targetSdkVersion 10
+        applicationId 'io.mhstud.mileage'
+        minSdkVersion 21
+        targetSdkVersion 28
 
-        testApplicationId "com.evancharlton.mileage.tests"
+        testApplicationId 'io.mhstud.mileage.tests'
         testInstrumentationRunner "android.test.InstrumentationTestRunner"
     }
 

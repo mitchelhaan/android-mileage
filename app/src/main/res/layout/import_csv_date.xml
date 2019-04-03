@@ -2,7 +2,7 @@
 <merge
 	xmlns:android="http://schemas.android.com/apk/res/android"
 >
-	<com.evancharlton.mileage.views.DividerView
+	<io.mhstud.mileage.views.DividerView
 		android:layout_width="fill_parent"
 		android:layout_height="wrap_content"
 		android:text="@string/divider_loaded_date"
@@ -13,7 +13,7 @@
 		android:layout_height="wrap_content"
 		android:textAppearance="?android:attr/textAppearanceLarge"
 	/>
-	<com.evancharlton.mileage.views.DividerView
+	<io.mhstud.mileage.views.DividerView
 		android:layout_width="fill_parent"
 		android:layout_height="wrap_content"
 		android:text="@string/divider_date_format"
@@ -23,7 +23,7 @@
 		android:layout_width="fill_parent"
 		android:layout_height="wrap_content"
 	/>
-	<com.evancharlton.mileage.views.DividerView
+	<io.mhstud.mileage.views.DividerView
 		android:layout_width="fill_parent"
 		android:layout_height="wrap_content"
 		android:text="@string/divider_parsed_date"

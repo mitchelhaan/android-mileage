@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <merge
 	xmlns:android="http://schemas.android.com/apk/res/android"
-	xmlns:mileage="http://schemas.android.com/apk/res/com.evancharlton.mileage"
+	xmlns:mileage="http://schemas.android.com/apk/res/io.mhstud.mileage"
 >
-	<com.evancharlton.mileage.views.DividerView
+	<io.mhstud.mileage.views.DividerView
 		android:layout_width="fill_parent"
 		android:layout_height="wrap_content"
 		android:text="@string/divider_interval_info"
@@ -22,19 +22,19 @@
 		android:inputType="textCapSentences|textAutoCorrect|textAutoComplete"
 		android:hint="@string/description"
 	/>
-	<com.evancharlton.mileage.views.DividerView
+	<io.mhstud.mileage.views.DividerView
 		android:layout_width="fill_parent"
 		android:layout_height="wrap_content"
 		android:text="@string/divider_interval_trigger"
 	/>
-	<com.evancharlton.mileage.views.DistanceDelta
+	<io.mhstud.mileage.views.DistanceDelta
 		android:id="@+id/distance"
 		android:layout_width="fill_parent"
 		android:layout_height="wrap_content"
 		android:inputType="number"
 		mileage:hint="@string/distance"
 	/>
-	<com.evancharlton.mileage.views.DateDelta
+	<io.mhstud.mileage.views.DateDelta
 		android:id="@+id/duration"
 		android:layout_width="fill_parent"
 		android:layout_height="wrap_content"

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
 	xmlns:android="http://schemas.android.com/apk/res/android"
-	xmlns:mileage="http://schemas.android.com/apk/res/com.evancharlton.mileage"
+	xmlns:mileage="http://schemas.android.com/apk/res/io.mhstud.mileage"
 	android:layout_width="fill_parent"
 	android:layout_height="wrap_content"
 	android:gravity="center"
@@ -15,7 +15,7 @@
 		android:layout_weight="1"
 		android:gravity="top"
 	>
-		<com.evancharlton.mileage.views.FormattedDateView
+		<io.mhstud.mileage.views.FormattedDateView
 			android:id="@android:id/text1"
 			android:layout_width="fill_parent"
 			android:textAppearance="?android:attr/textAppearanceLarge"
@@ -37,21 +37,21 @@
 		android:layout_height="wrap_content"
 		android:gravity="right"
 	>
-		<com.evancharlton.mileage.views.FormattedNumberView
+		<io.mhstud.mileage.views.FormattedNumberView
 			android:id="@+id/volume"
 			android:layout_width="wrap_content"
 			android:paddingRight="5dip"
 			android:layout_height="0dip"
 			android:layout_weight="1"
 		/>
-		<com.evancharlton.mileage.views.FormattedCurrencyView
+		<io.mhstud.mileage.views.FormattedCurrencyView
 			android:id="@+id/price"
 			android:layout_width="wrap_content"
 			android:paddingRight="5dip"
 			android:layout_height="0dip"
 			android:layout_weight="1"
 		/>
-		<com.evancharlton.mileage.views.FormattedNumberView
+		<io.mhstud.mileage.views.FormattedNumberView
 			android:id="@+id/economy"
 			android:layout_width="wrap_content"
 			android:layout_height="0dip"
